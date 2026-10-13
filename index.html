@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devanshi Dubey - Personal Portfolio</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <a href="#" class="logo">Portfolio<span>.</span></a>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#add-project">Add Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-btn"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Devanshi Dubey</h1>
+            <h3>And I'm a <span class="typing-text"></span></h3>
+            <p>Passionate Computer Science Engineering student and Web Developer focused on building interactive and responsive digital experiences.</p>
+            <div class="social-icons">
+                <a href="https://github.com/Devanshi0812" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/devanshi-dubey-65b2b2361" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <i class="fas fa-code"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="heading">About <span>Me</span></h2>
+        <div class="about-container">
+            <div class="about-content">
+                <h3>CSE Student & Developer</h3>
+                <p>I am currently pursuing my B.Tech in Computer Science Engineering. I love exploring new technologies, solving complex algorithmic problems, and developing full-stack web applications that solve real-world problems.</p>
+                <div class="about-details">
+                    <p><span>Degree:</span> B.Tech CSE</p>
+                    <p><span>GitHub:</span> <a href="https://github.com/Devanshi0812" target="_blank" style="color: var(--main-color);">github.com/Devanshi0812</a></p>
+                    <p><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/devanshi-dubey-65b2b2361" target="_blank" style="color: var(--main-color);">linkedin.com/in/devanshi-dubey-65b2b2361</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-react"></i>
+                <h3>React.js</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-node"></i>
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fas fa-database"></i>
+                <h3>MongoDB</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="project-container" id="projectContainer">
+            
+            <!-- Netflix Mirror -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Netflix Mirror</h3>
+                    <p>A streaming platform UI clone featuring dynamic movie rows, categories, and video browsing design.</p>
+                    <button class="btn-sm view-code-btn" data-project="netflix">View Code</button>
+                </div>
+            </div>
+
+            <!-- Kanban Project -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Kanban Project</h3>
+                    <p>A task management board app with interactive drag-and-drop state handling to organize workflows efficiently.</p>
+                    <button class="btn-sm view-code-btn" data-project="kanban">View Code</button>
+                </div>
+            </div>
+
+            <!-- Law Project -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Law Project</h3>
+                    <p>A digital legal portal built for tracking legal documents, managing client case records, and schedules.</p>
+                    <button class="btn-sm view-code-btn" data-project="law">View Code</button>
+                </div>
+            </div>
+
+            <!-- E-Commerce Project -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>E-Commerce Project</h3>
+                    <p>An online shopping website featuring secure routing, product catalog filtering, and dynamic cart management.</p>
+                    <button class="btn-sm view-code-btn" data-project="ecommerce">View Code</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Code Viewer Modal Popup -->
+    <div id="codeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Project Source Code</h2>
+            <p class="modal-subtitle">Complete HTML, CSS, and JavaScript Architecture</p>
+            <pre><code id="modalCodeContent"></code></pre>
+        </div>
+    </div>
+
+    <!-- Add New Project Section -->
+    <section id="add-project" class="contact">
+        <h2 class="heading">Add New <span>Project</span></h2>
+        <form id="addProjectForm">
+            <div class="input-box">
+                <input type="text" id="projTitle" placeholder="Project Title" required>
+                <input type="text" id="projLink" placeholder="GitHub Repository Link" required>
+            </div>
+            <textarea id="projDesc" cols="30" rows="5" placeholder="Detailed Project Description & Code Files" required></textarea>
+            <button type="submit" class="btn">Add Project to List</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form id="contactForm">
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Devanshi Dubey. All Rights Reserved. | <a href="https://github.com/Devanshi0812" target="_blank" style="color: var(--main-color);">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
